@@ -3,16 +3,16 @@ Vulnerabilities
 
 
 * [CVE-2010-0415](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0415)  
-  CVE-2010-0415 kernel: sys_move_pages infoleak
+  The do_pages_move function in mm/migrate.c in the Linux kernel before 2.6.33-rc7 does not validate node values, which allows local users to read arbitrary kernel memory locations, cause a denial of service (OOPS), and possibly have unspecified other impact by specifying a node that is not part of the kernel's node set.
 
 * [CVE-2009-2727](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2727)  
   Stack-based buffer overflow in the _tt_internal_realpath function in the ToolTalk library (libtt.a) in IBM AIX 5.2.0, 5.3.0, 5.3.7 through 5.3.10, and 6.1.0 through 6.1.3, when the rpc.ttdbserver daemon is enabled in /etc/inetd.conf, allows remote attackers to execute arbitrary code via a long XDR-encoded ASCII string to remote procedure 15.
 
 * [CVE-2009-2407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2407)  
-  CVE-2009-2407 kernel: ecryptfs heap overflow in parse_tag_3_packet()
+  Heap-based buffer overflow in the parse_tag_3_packet function in fs/ecryptfs/keystore.c in the eCryptfs subsystem in the Linux kernel before 2.6.30.4 allows local users to cause a denial of service (system crash) or possibly gain privileges via vectors involving a crafted eCryptfs file, related to a large encrypted key size in a Tag 3 packet.
 
 * [CVE-2009-2406](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2406)  
-  CVE-2009-2406 kernel: ecryptfs stack overflow in parse_tag_11_packet()
+  Stack-based buffer overflow in the parse_tag_11_packet function in fs/ecryptfs/keystore.c in the eCryptfs subsystem in the Linux kernel before 2.6.30.4 allows local users to cause a denial of service (system crash) or possibly gain privileges via vectors involving a crafted eCryptfs file, related to not ensuring that the key signature length in a Tag 11 packet is compatible with the key signature buffer size.
 
 * [CVE-2008-4556](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4556)  
   Stack-based buffer overflow in the adm_build_path function in sadmind in Sun Solstice AdminSuite on Solaris 8 and 9 allows remote attackers to execute arbitrary code via a crafted request.
